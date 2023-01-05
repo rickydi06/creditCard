@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&family=Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div class="contenedor"> <!--agregamos un contenedor div para encerrar la mayor parte del contenido, donde agregamos varias secciones-->
+        <section class="tarjeta" id="tarjeta"> <!--agregamos la seccion para lo que sería la tarjeta-->
+            <div class="delantera"> <!--agregamos la seccion delantera que contendra el div del logotipo-->
+                <div class="logo-marca"> <!--agregamos un div para el logo-->
+                    <img src="Image/logos/visa.png" alt="visa_card"> <!--agregamos la imagen del logotipo-->
+                </div>
+                <img src="Image/chip.png" class="chip" alt="sim_chip"> <!--agregamos otra imagen fuera del div del chip-->
+                <div class="datos"> <!--creamos un div para las distintas partes de los datos de la izquierda y derecha-->
+                    <div class="grupo" id="numeroTarjeta"> <!--dentro de este div, iran los datos numero de tarjeta-->
+                        <p class="label" >Número Tarjeta</p> <!--agregamos un parrafo con su clase para darle estilo-->
+                        <p class="numero">#### #### #### ####</p> <!--agregamos un parrafo con su clase para darle estilo-->
+                    </div>
+                    <div class="flexbox"> <!--este div contendra los datos de nombre titular y expiracion-->
+                        <div class="grupo" id="nombreTitular"> <!--dentro de este div, iran los datos nombre del titular-->
+                            <p class="label">Nombre Titulat</p> <!--agregamos un parrafo con su clase para darle estilo-->
+                            <p class="nombreTitular">Jhon Doe</p> <!--agregamos un parrafo con su clase para darle estilo-->
+                        </div>
+                        <div class="grupo" id="expiracion"> <!--dentro de este div, iran los datos de expiracion-->
+                                <p class="label">Expiración</p> <!--agregamos un parrafo con su clase para darle estilo-->
+                                <p class="expiracion"><span class="mes">MM</span> / <span class="year">AA</span></p> <!--agregamos un parrafo con su clase para darle estilo, agregamos etiquetas span que ayudaran a que poder modificar el mes y año por separado-->
+                        </div>
+                    </div>                    
+                </div>
+
+
+            </div>
+        </section>
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/2953684855.js" crossorigin="anonymous"></script>
+    <script src="JS/main.js"></script>
+</body>
+</html>

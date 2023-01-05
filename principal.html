@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banca Móvil 2</title>
+</head>
+<body>
+    <h1>Bienvenido a tu banco online</h1>
+    <label for="">Cuenta 1 Saldo: </label>
+    <input type="text" name="Cantidad 1" id="C1" value=" 1,200">
+    <label for="">Cuenta 2 Saldo: </label>
+    <input type="text" name="Cantidad 2" id="C2" value=" 500">
+    <form action="">
+        <h2>Transferencias</h2>
+        <input type="text" name="" id="Quant" placeholder="Cantidad">
+        <hr>
+        <hr>
+        <input type="button" value="Transferencia de cuenta 1 a cuenta 2" id="bt2" onclick="formula()">
+        <input type="button" value="Transferencia de cuenta 2 a cuenta 1" id="bt3" onclick="formula2()">
+        <input type="button" value="Depositar a cuenta 1" id="bt4" onclick="formula3()">
+        <input type="button" value="Depositar a cuenta 2" id="bt5" onclick="formula4()">
+        <input type="button" value="Retirar de cuenta 1" id="bt6" onclick="formula5()">
+        <input type="button" value="Retirar de cuenta 2" id="bt7" onclick="formula6()">
+    </form>
+    <script>
+        /* ESTO ES PARA TRANS DE 1 A 2 */
+        function formula(){  
+            var cantidadT=parseFloat(document.getElementById('Quant').value);
+            var cantidad1=parseFloat(document.getElementById('C1').value);
+            var cantidad2=parseFloat(document.getElementById('C2').value);
+            document.getElementById('C1').value=(cantidad1 - cantidadT);
+            document.getElementById('C2').value=(cantidad2 + cantidadT);
+        }
+
+        /* ESTO ES PARA TRANS DE 2 A 1 */
+        function formula2(){ 
+            var cantidadT=parseFloat(document.getElementById("Quant").value);
+            var cantidad1=parseFloat(document.getElementById("C1").value);
+            var cantidad2=parseFloat(document.getElementById("C2").value);
+            document.getElementById('C1').value=(cantidad1 + cantidadT);
+            document.getElementById('C2').value=(cantidad2 - cantidadT);
+        }
+        /* ESTO ES PARA DEPOSITAR A 1 */
+        function formula3(){ 
+            var cantidadT=parseFloat(document.getElementById("Quant").value);
+            var cantidad1=parseFloat(document.getElementById("C1").value);
+            document.getElementById('C1').value=(cantidad1 + cantidadT);
+        }
+        /* ESTO ES PARA DEPOSITAR A 2 */
+        function formula4(){ 
+            var cantidadT=parseFloat(document.getElementById("Quant").value);
+            var cantidad2=parseFloat(document.getElementById("C2").value);
+            document.getElementById('C2').value=(cantidad2 + cantidadT);
+        }
+        /* ESTO ES PARA RETIRAR DE 1 */
+        function formula5(){ 
+            var cantidadT=parseFloat(document.getElementById("Quant").value);
+            var cantidad1=parseFloat(document.getElementById("C1").value);
+            document.getElementById('C1').value=(cantidad1 - cantidadT);
+        }
+        /* ESTO ES PARA RETIRAR DE 2 */
+        function formula6(){ 
+            var cantidadT=parseFloat(document.getElementById("Quant").value);
+            var cantidad2=parseFloat(document.getElementById("C2").value);
+            document.getElementById('C2').value=(cantidad2 - cantidadT);
+        }
+    </script>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <form action="">
+        <h2>Tarjeta</h2>
+        <hr>
+        <input type="button" value="Ir a mis datos bancarios" onclick="dBank(this.form)">    
+    </form>
+    <script>
+        function dBank(form){
+            location="tarjeta.html"
+        }
+    </script>
+</body>
+</html>
