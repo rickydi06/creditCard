@@ -1,0 +1,10 @@
+* { /*configuracion para quitar la del navegador*/
+    padding: 0; /*relleno de 0*/
+    margin: 0; /*margin de 0*/
+    box-sizing: border-box; /*box-sizing nos permite incluir el relleno y el borde en la anchura y altura totales de un elemento.*/
+}
+
+body { /*cambiamos el color de la pagina*/
+    background: #ddeefc; /*le damos un color al fondo*/
+    font-family: 'Lato', sans-serif; /*escogemos un tipo de fuente, y en este caso si no encuentra un tipo de letra, escogera el otro estilo*/
+}
