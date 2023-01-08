@@ -178,3 +178,7 @@ body { /*cambiamos el color de la pagina*/
     border: none; /*esto quita el borde que aagrega el navegador*/
     cursor: pointer; /*que cambie el puntero*/
 }
+
+.contenedor-btn .btn-abrir-formulario:hover {
+    background: #1850b1; /*al pasar con el puntero sobre el boton, el color de fondo va a cambiar a un tono mas oscuro*/
+}
