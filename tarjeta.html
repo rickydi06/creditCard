@@ -61,8 +61,21 @@
                 <i class="fas fa-plus"></i>                
             </button>
         </div>
+        <!--SECCION DEL FORMULARIO-->
+        <form action="" class="formulario-tarjeta" id="formlario-tarjeta"> <!--agregamos una etiqueta de formulario con id y clase con el mismo nombre-->
+            <div class="grupo"> <!--agregamos un div que contendra el label y el input del dato-->
+                <label for="inputNumero"> <!--agregamos el label para el titulo de numero de tarjeta, la propipedad de "for", es para que aunque se de un clic fuera del area de escritura, es decir, en el nombre del "label", se comience a escribir-->
+                    Número Tarjeta
+                </label>
+                <input type="text" id="inputNumero" maxlength="19" autocomplete="off"> <!--agregamos un "input" con un maximo de 19 caracteres y deshabilitamos el autocompletado-->            
+            </div>
+            
+
+            
+        </form>
         
     </div>
+    
 
 
     <script src="https://kit.fontawesome.com/2953684855.js" crossorigin="anonymous"></script>

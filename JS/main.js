@@ -8,5 +8,5 @@ tarjeta.addEventListener('click', () => { /*queremos acceder a tarjeta con el ev
 
 //esta parte hace la funcion (ABRE EL FORMULARIO) con el BOTON y hace girar el boton 45° al hacer clic sobre él
 btnAbrirFormulario.addEventListener('click', () => { //queremos acceder a bontonAbrirFormulario con el evento listener (de tipo clic) y queremos que cuando se de un clic, me ejecute la siguiente funcione "() =>"
-    btnAbrirFormulario.classList.toggle('active'); // y cuando den un clic en el boton, se activara la clase "active", y decimos, quiero acceder a su lista de clases, y que haga un toogle de la clase active. El toggle significa que sino tiene la clase active se la va a poner y si ya la tiene se la va a quitar*/
-})
+         btnAbrirFormulario.classList.toggle('active'); // y cuando den un clic en el boton, se activara la clase "active", y decimos, quiero acceder a su lista de clases, y que haga un toogle de la clase active. El toggle significa que sino tiene la clase active se la va a poner y si ya la tiene se la va a quitar*/
+}) 
