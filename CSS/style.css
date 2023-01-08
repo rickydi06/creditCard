@@ -93,10 +93,19 @@ body { /*cambiamos el color de la pagina*/
 }
 /*EMPIEZA TARJETA TRASERA*/
 .trasera {
-    background: url(../Image/fondosTarjeta/fondo7.png);
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    transform: rotateY(180deg);
-    backface-visibility: hidden;
+    background: url(../Image/fondosTarjeta/fondo7.png); /*agregamos una imagen a la parte trasera*/
+    background-size: cover; /*cambia el tamaño de la imagen de fondo para cubrir el contenedor entero, incluso si se tiene que estirar o cortar un poco uno de los bordes*/
+    position: absolute; /*esto nos hace que latarjeta trasera se muestre cuando la tarjeta gire*/
+    top: 0; /*la propiedad top establece el borde superior de un elemento a una unidad por encima/debajo del borde superior de su antepasado posicionado más cercano. Es importante que antes de usar el absoluto en esta parte de la tarjeta, y el posicionamiento de "top 0", va a llevar la parte trasera a arriba. ESTO HACE QUE LA PARTE TRASERA SE POSICIONE ENCIMA DE LA PARTE DELANTERA*/
+    transform: rotateY(180deg); /*esto va a girar la tarjeta 180° y las letras se veran alreves, pero la siguiente propiedad va arreglar esta situacion*/
+    backface-visibility: hidden; /*va a ocultar la parte trasera*/
+}
+
+.trasera .barra-magnetica {
+    height: 40px; /*define el alto de la barra magnetica*/
+    background: #000; /*define el color de la barra*/
+    width: 100%;position: absolute; /*define el ancho de la barra magnetica*/
+    position: absolute; /*con los estilos anteriores la barra apareece desfazada y fuera del contenedor, por lo que al usar esta propiedad, coloca la barra en el lugar que queremos pero desfasada, ahora sólo toca acomodarla con las siguientes propiedades*/
+    top: 30px; /*esto movera 35px hacia abajo de la parte de arriba, pero la barra sigue desfazada, por lo que necesitamos moverla con la siguiente propiedad*/
+    left: 0; /*esto movera a la posicion 0px, es decir, al inicio del contenedor*/
 }
