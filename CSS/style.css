@@ -20,3 +20,20 @@ body { /*cambiamos el color de la pagina*/
     align-items: center; /*no podemos ocupar la propiedad de justify-content:center, esto es porque utilizamos el flex-direction:column, en su lugar usamos align-items:center*/
     background: grey; /*le damos un fondo para ver nuestra area*/
 }
+/*--ESTILOS GENERALES DE LAS TARJETAS--*/
+.tarjeta { /*accedemos a la seccion de la tarjeta*/
+    width: 100%; /*le damos un ancho del 100%*/
+    max-width: 550px; /*para que la tarjeta no sea demasiado grande porque en realidad es casi del tamaño de una real tarjeta*/ 
+    position: relative; /*Esto es porque como hay una parte frente y un posterior, al codificar ambos lados, se posicionan una debajo de la primera, esto hace que se superposicionen*/ 
+    color: #fff; /*qyue el texto sea de color blanco*/ 
+    transition: .3s ease all; /*Una propiedad de transicion de 0.3s con una funcion "ease all" para todas la propiedades*/ 
+    transform: rotateY(0deg); /*esto es para que por defecto, tenga una rotacion de 0 grados, esto es, que quede fija y no se mueva*/
+    transform-style: preserve-3d; /*el valor de "preserve-3d", es muy importante para poder conseguir el giro de adelante hacia atras y viceversa*/
+    backface-visibility: hidden; /*esto es para que cuando gire la tarjeta, la parte de atra este oculta, y solo se muestre la parte de la tarjeta que debe verse*/
+    cursor: pointer; /*cambia de forma el cursor cuando entra al area del div*/
+    z-index: 2; /*esto le da la segunda posicion en la visualizacion, porque va el boton de despliegue, la tarjeta con sus dos lados y el formulario con los datosy queda hasta arriba el boton (3ro), la tarjeta (2do), formulario (1ro)*/ /**/ /**/ /**/ /**/
+}
+
+.tarjeta.active{ /*usamos .tarjeta:hover{} pero con solo pasar el cursor encima, gira la imagen de la tarjeta sin parar, entonces para solucionar esto usamos .tarjeta.active, pero el ".active", es una funcion que haremos con javascript*/
+    transform: rotateY(180deg);
+}
