@@ -8,3 +8,15 @@ body { /*cambiamos el color de la pagina*/
     background: #ddeefc; /*le damos un color al fondo*/
     font-family: 'Lato', sans-serif; /*escogemos un tipo de fuente, y en este caso si no encuentra un tipo de letra, escogera el otro estilo*/
 }
+
+/*EMPIEZA LA SECCION DEL ESTILO DEL CONTENEDOR GENERAL*/
+.contenedor { /*configuramos el contenedor general*/
+    width: 90%; /*le damos un ancho de pagina*/
+    max-width: 1000px; /*pero le decimos que como maximo tenga solo 1000px de ancho*/
+    padding: 40px 20px; /*que tenga un relleno de 40px arriba, y 20px a los lados*/
+    margin: auto; /*le decimos que tenga un margen auto para centrar la pagina de forma horizontal*/
+    display: flex; /*todo el contenido dentro del contenedor, es decir, los hijos, los quiero trabajar con el display*/
+    flex-direction: column; /*esta configuracion es para que nos configure y alinie los elementos en forma de columna (la tarjeta, el boton y el formulario) y no se coloquen uno al lado del otro*/
+    align-items: center; /*no podemos ocupar la propiedad de justify-content:center, esto es porque utilizamos el flex-direction:column, en su lugar usamos align-items:center*/
+    background: grey; /*le damos un fondo para ver nuestra area*/
+}
