@@ -47,7 +47,7 @@ body { /*cambiamos el color de la pagina*/
     justify-content: space-between; /*justificaremos el contenido con un espacio entre los elementos*/
     box-shadow: 0 10px 10px 0 rgba(90, 116, 148, 0.3); /*el sombreado sera de 0px hacia abajo, 10px hacia la derecha, 0px de tamaño, y un color de 0.3 de opacidad*/
 }
-
+/*EMPIEZA TARJETA DELANTERA */
 .tarjeta .delantera { /*accedemos a la clase delantera*/
     width: 100%; /*le damos un ancho del 100%*/
     background: url(../Image/fondosTarjeta/fondo2.png); /*forma de utilizar "url" para imagenes descargadas y no de un enlace*/
@@ -90,4 +90,13 @@ body { /*cambiamos el color de la pagina*/
     display: flex; /*esto hara flexible este contenedor y de momento movera un div a lado del otro hasta que se modifique en la siguiente linea*/
     justify-content: space-between; /*para separar los div de nombre y expiracion*/
     margin-top: 20px; /*le damos un margen de 20px*/
+}
+/*EMPIEZA TARJETA TRASERA*/
+.trasera {
+    background: url(../Image/fondosTarjeta/fondo7.png);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
 }
