@@ -109,3 +109,13 @@ body { /*cambiamos el color de la pagina*/
     top: 30px; /*esto movera 35px hacia abajo de la parte de arriba, pero la barra sigue desfazada, por lo que necesitamos moverla con la siguiente propiedad*/
     left: 0; /*esto movera a la posicion 0px, es decir, al inicio del contenedor*/
 }
+
+.trasera .datos {
+    margin-top: 60px; /*esto baja todos los datos de FIRMA, CCV, LOREM y el CORREO DEL BANCO para que se puedan visualizar, ya que la barra magnetica los estaba tapando*/
+    display: flex; /*esto le dice al contenedor de los datos que queremos un contenedor flexible*/
+    justify-content: space-between; /*esto hace un espacio entre elementos hasta que se modifique con otras etiquetas*/
+}
+
+.trasera .datos P {
+    margin-bottom: 5px; /*esto hara que se separe por 5px la etiqueta "p" de FIRMA Y CCV del contenedor de abajo con el lorem*/
+}
