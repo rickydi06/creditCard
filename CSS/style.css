@@ -157,6 +157,24 @@ body { /*cambiamos el color de la pagina*/
 
 .trasera .link-banco {
     font-size: 14px; /*al igual que la leyenda, le damos un tamaño de letra de 14px*/
-    color: #fff; /*y un color de letra color blanco*/
+    color: rgba(255, 255, 255, 0.24); /*y un color de letra color blanco*/
 }
 
+/*EMPIEZA CONTENEDOR DEL BOTON*/
+.contenedor-btn .btn-abrir-formulario {
+    width: 50px; /*le damos un ancho de 50px*/
+    height: 50px; /*le damos un alto de 50px*/
+    font-size: 20px; /*el tamaño de la fuente es de 20px*/
+    line-height: 20px;  /*le damos un alto de linea de 20px*/
+    background: #2364d2; /*le damos un fondo de color negro*/
+    color: #fff; /*color de texto color blanco*/
+    position: relative; /*la posicion del boton con esta propiedad lo coloca enseguida debajo de la tarjeta, entonces para poderlo subir y que el boton quede una mitad en la tarjeta y otra por fuera usaremos la propiedad "top"*/
+    top: -25px; /*al darle un valor negativo de -25px, lo que haremos, será subir el boton y quede de la forma que queremos, pero quedara la mitad oculta o detras de la tarjeta, y lo arreglaremos con la siguiente propiedad*/
+    z-index: 3; /*esto hara que el boton quede encima de todo pues el numero 3, representa la 3ra posicion, ya que el formulario es el 1ro, la tarjeta es la 2da, y el boton queda en 3ro*/
+    border-radius: 50%; /*esto hara que el boton pase de cuadrado a redondo*/
+    box-shadow: -5px 4px 8px rgba(24, 56, 182, 0.4); /*hacemos un desplazamiento de 5px horizontal, un desplazamiento de 4px vertical y un color difuminado en 8px con una opacidad de 0.4*/
+    padding: 5px; /*le damos un relleno de 5px*/
+    transition: .3s ease all; /*que tenga una transicion para TODAS LAS PROPIEDADES, de .2segundos con una funcion de tiempo ease (efecto de inicio lento, luego rapido, luego lentamente(esto es por defecto))*/
+    border: none; /*esto quita el borde que aagrega el navegador*/
+    cursor: pointer; /*que cambie el puntero*/
+}
