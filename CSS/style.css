@@ -141,3 +141,17 @@ body { /*cambiamos el color de la pagina*/
 .trasera .datos #cvv {
     width: 20%;  /*esto nos dara un ancho del 20% del contenedor donde va la ccv*/
 }
+
+.trasera .datos #cvv .cvv {
+    background: #fff; /*esto nos dara un fondo blanco*/
+    height: 40px; /*una altura de 40px que similar a la altura de la firma*/
+    color: #000; /*le agregamos un color negro a la letra*/
+    padding: 10px; /*si solo ponemos una cantidad, aplica a todos los lados de 10px*/
+    text-align: center; /*esto hace que el texto quede aliniado*/
+}
+
+.trasera .leyenda {
+    font-size: 14px; /*le damos un tamño de letra de 14px a la leyenda*/
+    line-height: 24px; /*una altura de linea de 24px*/
+}
+
