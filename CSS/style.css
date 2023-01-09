@@ -72,3 +72,8 @@ body { /*cambiamos el color de la pagina*/
     margin-bottom: 20px; /*le damos un margen inferior de 20px*/
 }
 
+.delantera .grupo .label { /*accedemos a la clase delantera, para acceder a la clase grupo y modificar la clase hija label*/
+    font-size: 16px; /*le damos un tamño de letra de 16px*/
+    color: #7d8994; /*le damos un color de fuente*/
+    margin-bottom: 5px; /*le damos un margen inferior de 5px*/
+}
