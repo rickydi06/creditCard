@@ -53,3 +53,9 @@ body { /*cambiamos el color de la pagina*/
     background: url(../Image/fondosTarjeta/fondo2.png); /*forma de utilizar "url" para imagenes descargadas y no de un enlace*/
     background-size: cover; /*cambia el tamaño de la imagen de fondo para cubrir el contenedor entero, incluso si se tiene que estirar o cortar un poco uno de los bordes*/
 }
+
+.delantera .logo-marca { /*accedemos a la clase delantera y luego a la clase logo-marca*/
+    text-align: right; /*alineamos la imagen a la derecha*/
+    min-height: 50px; /*le damos una altura minima de 50px*/
+}
+
