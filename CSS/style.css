@@ -200,3 +200,8 @@ body { /*cambiamos el color de la pagina*/
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /*con el estilo "clip-path" se puede hacer la animacion de que al dar clic en el boton, aparece y desaparece el formulario, ahora la propiedad de "polygon", con las coordenadas (0 0, ), el primer 0 es de izquierda a derecha y el segundo 0 es de arriba a abajo, luego le digo, que el poligono vaya hacia la coordenada (100% 0) derecha y arriba a abajo*/
     /* transition: clip-path .3s ease-out; que tenga una transicion con la popiedad "clip-path", de .3segundos con una funcion de tiempo ease-out (efecto de termino lento) */
 }
+
+.formulario-tarjeta.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /*con el estilo "clip-path" se puede hacer la animacion de que al dar clic en el boton, aparece y desaparece el formulario, ahora la propiedad de "polygon", con las coordenadas (0 0, ), el primer 0 es de izquierda a derecha y el segundo 0 es de arriba a abajo, luego le digo, que el poligono vaya hacia la coordenada (100% 0) derecha y arriba a abajo*/
+}
+
