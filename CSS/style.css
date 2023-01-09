@@ -66,4 +66,9 @@ body { /*cambiamos el color de la pagina*/
     max-width: 80px; /*la imagen solo tendra como maximo de ancho 80px*/ 
 }
 
+.delantera .chip { /*accedemos a la clase delantera, para acceder a la clase chip*/
+    width: 100%; /*le damos ancho del 100%*/
+    max-width: 50px; /*un ancho maximo de 50px*/
+    margin-bottom: 20px; /*le damos un margen inferior de 20px*/
+}
 
