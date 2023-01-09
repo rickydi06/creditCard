@@ -9,51 +9,60 @@
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
-    <div class="contenedor">
-        <section class="tarjeta" id="tarjeta">
-            <div class="delantera">
-                <div class="logo-marca">
-                    <img src="Image/logos/visa.png" alt="card_logo">
+    <div class="contenedor"> <!--agregamos un contenedor div para encerrar la mayor parte del contenido, donde agregamos varias secciones-->
+        <section class="tarjeta" id="tarjeta"> <!--agregamos la seccion para lo que sería la tarjeta-->
+            <div class="delantera"> <!--agregamos la seccion delantera que contendra el div del logotipo-->
+                <div class="logo-marca"> <!--agregamos un div para el logo-->
+                    <img src="Image/logos/visa.png" alt="card_logo"> <!--agregamos la imagen del logotipo-->
                 </div>
-                <img src="Image/chip.png" class="chip" alt="image_chip">
-                <div class="datos">
-                    <div class="grupo" id="numero">
-                        <p class="label">Número Tarjeta</p>
-                        <p class="numero">#### #### #### ####</p>
+                <img src="Image/chip.png" class="chip" alt="image_chip"> <!--agregamos otra imagen fuera del div del chip-->
+                <div class="datos"> <!--creamos un div para las distintas partes de los datos de la izquierda y derecha-->
+                    <div class="grupo" id="numero"> <!--dentro de este div, iran los datos numero de tarjeta-->
+                        <p class="label">Número Tarjeta</p> <!--agregamos un parrafo con su clase para darle estilo-->
+                        <p class="numero">#### #### #### ####</p> <!--agregamos un parrafo con su clase para darle estilo-->
                     </div>
                     <div class="flexbox"> <!--este div contendra el nombre titular y la expiracion-->
-                        <div class="grupo" id="nombre">
-                            <p class="label">Nombre Titular</p>
-                            <p class="nombre">Lucero Díaz Cruz</p>
+                        <div class="grupo" id="nombre"> <!--dentro de este div, iran los datos nombre del titular-->
+                            <p class="label">Nombre Titular</p> <!--agregamos un parrafo con su clase para darle estilo-->
+                            <p class="nombre">Lucero Díaz Cruz</p> <!--agregamos un parrafo con su clase para darle estilo-->
                         </div>
 
-                        <div class="grupo" id="expiracion">
-                            <p class="label">Expiracion</p>
-                            <p class="expiracion"><span class="mes">MM</span> / <span class="year">AA</span></p>
+                        <div class="grupo" id="expiracion"> <!--dentro de este div, iran los datos de expiracion-->
+                            <p class="label">Expiracion</p> <!--agregamos un parrafo con su clase para darle estilo-->
+                            <p class="expiracion"><span class="mes">MM</span> / <span class="year">AA</span></p> <!--agregamos un parrafo con su clase para darle estilo, agregamos etiquetas span que ayudaran a que poder modificar el mes y año por separado-->
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="trasera" id="trasera">
-                <div class="barra-magnetica"></div>
+<!--CONTENEDOR DE LA SECCION TRASERA DE LA TARJETA-->
+            <div class="trasera" id="trasera"> <!--CONTENEDOR DE LA SECCION TRASERA DE LA TARJETA-->
+                <div class="barra-magnetica"></div> <!--SECCION DE LA BARRA MAGNETICA-->
                 <div class="datos">
-                    <div class="grupo" id="firma">
+                    <div class="grupo" id="firma"> <!--SECCION DE LOS DATOS DE LA FIRMA-->
                         <p class="label">Firma</p>
-                        <div class="firma">
-                            <p></p>
+                        <div class="firma"> <!--SECCION DE LA FIRMA-->
+                            <p></p> <!--SECCION DE LA BARRA DONDE APARECERA LA FIRMA-->
                         </div>
                     </div>
-                    <div class="grupo" id="cvv">
+                    <div class="grupo" id="cvv"> <!--SECCION DE LOS DATOS CCV-->
                         <p class="label">CVV</p>
                         <p class="cvv"></p>
                     </div>
                 </div>
-                <p class="leyenda">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis, iure illo sapiente possimus quidem eligendi nesciunt quaerat aliquid illum consectetur aperiam esse doloribus.</p>
-                <a href="#" class="link-banco">tubancotedesbanca.com</a>
+                <p class="leyenda"> <!--SECCION DE LA LEYENDA-->
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis, iure illo sapiente possimus quidem eligendi nesciunt quaerat aliquid illum consectetur aperiam esse doloribus.
+                </p>
+                <a href="#" class="link-banco">tubancotedesbanca.com</a> <!--SECCION DEL CORREO DEL BANCO-->
             </div>
-
         </section>
+        <!--SECCION DEL BOTON DE GIRO DE LA TARJETA-->
+        <div class="contenedor-btn"> <!--SECCION DEL BOTON-->
+            <button class="btn-abrir-formulario" id="btn-abrir-formulario">
+                <i class="fas fa-plus"></i>
+            </button>
+        </div>
+
+
     </div>    
 
     <script src="https://kit.fontawesome.com/2953684855.js" crossorigin="anonymous"></script>
