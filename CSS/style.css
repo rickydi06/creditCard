@@ -138,3 +138,6 @@ body { /*cambiamos el color de la pagina*/
     text-transform: capitalize; /*esto hace que todas las palabras que escribamos aparezcan con la primer letra mayuscula y las demas minusculas en cada palabra*/
 }
 
+.trasera .datos #cvv {
+    width: 20%;  /*esto nos dara un ancho del 20% del contenedor donde va la ccv*/
+}
