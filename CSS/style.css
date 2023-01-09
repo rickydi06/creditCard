@@ -115,3 +115,7 @@ body { /*cambiamos el color de la pagina*/
     display: flex; /*esto le dice al contenedor de los datos que queremos un contenedor flexible*/
     justify-content: space-between; /*esto hace un espacio entre elementos hasta que se modifique con otras etiquetas*/
 }
+
+.trasera .datos p {
+    margin-bottom: 5px; /*esto hara que se separe por 5px la etiqueta "p" de FIRMA Y CCV del contenedor de abajo con el lorem*/
+}
