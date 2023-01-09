@@ -33,3 +33,17 @@ body { /*cambiamos el color de la pagina*/
     cursor: pointer; /*cambia de forma el cursor cuando entra al area del div*/
     z-index: 2; /*esto le da la segunda posicion en la visualizacion, porque va el boton de despliegue, la tarjeta con sus dos lados y el formulario con los datosy queda hasta arriba el boton (3ro), la tarjeta (2do), formulario (1ro)*/ /**/ /**/ /**/ /**/
 }
+
+.tarjeta.active{ /*usamos .tarjeta:hover{} pero con solo pasar el cursor encima, gira la imagen de la tarjeta sin parar, entonces para solucionar esto usamos .tarjeta.active, pero el ".active", es una funcion que haremos con javascript*/
+    transform: rotateY(180deg);
+}
+
+.tarjeta > div { /*dado que se ocupa un div para ambos lados de la tarjeta se hace el estilo accediendo a la clase y luego modificamos el div*/
+    padding: 30px; /*un relleno de 30px*/
+    border-radius: 15px; /*un borde redondeado en las pumtas de 15px*/
+    min-height: 315px; /*una altura minima de 315px*/
+    display: flex; /*vamos a trabajar con un contenedor flexible*/
+    flex-direction: column; /*la direccion sera de tipo columna*/
+    justify-content: space-between; /*justificaremos el contenido con un espacio entre los elementos*/
+    box-shadow: 0 10px 10px 0 rgba(90, 116, 148, 0.3); /*el sombreado sera de 0px hacia abajo, 10px hacia la derecha, 0px de tamaño, y un color de 0.3 de opacidad*/
+}
