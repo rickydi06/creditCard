@@ -100,3 +100,12 @@ body { /*cambiamos el color de la pagina*/
     transform: rotateY(180deg); /*esto va a girar la tarjeta 180° y las letras se veran alreves, pero la siguiente propiedad va arreglar esta situacion*/
     backface-visibility: hidden; /*va a ocultar la parte trasera*/
 }
+
+.trasera .barra-magnetica {
+    height: 40px; /*define el alto de la barra magnetica*/
+    background: #000; /*define el color de la barra*/
+    width: 100%; /*define el ancho de la barra magnetica*/
+    position: absolute; /*con los estilos anteriores la barra apareece desfazada y fuera del contenedor, por lo que al usar esta propiedad, coloca la barra en el lugar que queremos pero desfasada, ahora sólo toca acomodarla con las siguientes propiedades*/
+    top: 30px; /*esto movera 35px hacia abajo de la parte de arriba, pero la barra sigue desfazada, por lo que necesitamos moverla con la siguiente propiedad*/
+    left: 0; /*esto movera a la posicion 0px, es decir, al inicio del contenedor*/
+}
