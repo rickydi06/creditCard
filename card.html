@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&family=Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div class="contenedor">
+        <section class="tarjeta" id="tarjeta">
+            <div class="delantera">
+                <div class="logo-marca">
+                    <img src="Image/logos/visa.png" alt="card_logo">
+                </div>
+                <img src="Image/chip.png" class="chip" alt="image_chip">
+                <div class="datos">
+                    <div class="grupo" id="numero">
+                        <p class="label">Número Tarjeta</p>
+                        <p class="numero">#### #### #### ####</p>
+                    </div>
+                    <div class="flexbox"> <!--este div contendra el nombre titular y la expiracion-->
+                        <div class="grupo" id="nombre">
+                            <p class="label">Nombre Titular</p>
+                            <p class="nombre">Lucero Díaz Cruz</p>
+                        </div>
+
+                        <div class="grupo" id="expiracion">
+                            <p class="label">Expiracion</p>
+                            <p class="expiracion"><span class="mes">MM</span> / <span class="year">AA</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>    
+
+    <script src="https://kit.fontawesome.com/2953684855.js" crossorigin="anonymous"></script>
+    <script src="JS/main.js"></script>
+</body>
+</html>
