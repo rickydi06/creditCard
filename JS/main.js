@@ -1,5 +1,6 @@
 const tarjeta = document.querySelector('#tarjeta'), //agregamos una constante de nombre tarjeta (nada tiene que ver con el html) y accedemos al id="tarjeta" del HTML
-    btnAbrirFormulario = document.querySelector('#btn-abrir-formulario'); //quitamos el ";" que habiamos puesto por una ",", y agregamos otra variable (btnAbrirFormulario) en la siguiente linea
+    btnAbrirFormulario = document.querySelector('#btn-abrir-formulario'), //quitamos el ";" que habiamos puesto por una ",", y agregamos otra variable (btnAbrirFormulario) en la siguiente linea
+    formulario = document.querySelector('#formulario-tarjeta'); //quitamos el ";" que habiamos puesto en la línea anterior por una ",", y agregamos otra variable (formulario)
 
 
 // esta parte hace la funcion de darle un giro a la tarjeta al hacer clic sobre ella
@@ -9,7 +10,7 @@ tarjeta.addEventListener('click', () => { /*queremos acceder a tarjeta con el ev
 
 //esta parte hace la funcion (ABRE EL FORMULARIO) con el BOTON y hace girar el boton 45° al hacer clic sobre él
 btnAbrirFormulario.addEventListener('click', () => { //queremos acceder a bontonAbrirFormulario con el evento listener (de tipo clic) y queremos que cuando se de un clic, me ejecute la siguiente funcione "() =>"
-    btnAbrirFormulario.classList.toggle('active'); // y cuando den un clic en el boton, se activara la clase "active", y decimos, quiero acceder a su lista de clases, y que haga un toogle de la clase active. El toggle significa que sino tiene la clase active se la va a poner y si ya la tiene se la va a quitar*/
-    
+    btnAbrirFormulario.classList.toggle('active'), // y cuando den un clic en el boton, se activara la clase "active", y decimos, quiero acceder a su lista de clases, y que haga un toogle de la clase active. El toggle significa que sino tiene la clase active se la va a poner y si ya la tiene se la va a quitar*/
+    formulario.classList.toggle('active'); //dentro de esta misma funcion agregamos la parte para el formulario ya que actuan en conjunto el bonton con el formulario y cuando den un clic en el boton, se activara la clase "active", y decimos, quiero acceder a su lista de clases, y que haga un toogle de la clase active. El toggle significa que sino tiene la clase active se la va a poner y si ya la tiene se la va a quitar*/    
 }) 
 
