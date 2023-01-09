@@ -224,4 +224,8 @@ body { /*cambiamos el color de la pagina*/
     border-radius: 5px; /*que tenga un borde de 5px redondeado*/ 
 }
 
-/**/ /**/ /**/
+.formulario-tarjeta input:hover,
+.formulario-tarjeta select:hover { /*decimos que los inputs como los selects en su estado hover tengan lo siguiente*/
+    border: 2px solid #93bded; /*que tenga un borde de 2px, solido y un color*/
+}
+
