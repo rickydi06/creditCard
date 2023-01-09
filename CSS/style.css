@@ -59,3 +59,11 @@ body { /*cambiamos el color de la pagina*/
     min-height: 50px; /*le damos una altura minima de 50px*/
 }
 
+.delantera .logo-marca img { /*accedemos a la clase delantera, luego a su clase hija logo-marca, para modficar la imagen contenida*/
+    width: 100%; /*un ancho del 100%*/
+    height: 100%; /*una altura del 100%*/ 
+    object-fit: cover; /*la imagen mantiene su aspecto y llena la dimension dada, la imagen es recortada para que quepa*/
+    max-width: 80px; /*la imagen solo tendra como maximo de ancho 80px*/ 
+}
+
+
