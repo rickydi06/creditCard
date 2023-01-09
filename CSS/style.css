@@ -211,3 +211,17 @@ body { /*cambiamos el color de la pagina*/
     margin-bottom: 5px; /*margen inferior de 5px*/
     font-size: 16px; /*tamao de fuente de 16px*/
 }
+
+.formulario-tarjeta input,
+.formulario-tarjeta select,
+.btn-enviar { /*daremos un estilo similar a los inputs, seelcts y el boton de enviar*/
+    border: 2px solid #ced6e0; /*le damos un borde, que sea solido y ademas un color*/
+    font-size: 18px; /*un tamaño de fuente de 18px*/
+    height: 50px; /*una altura de 50px*/ 
+    width: 100%; /*un ancho del 100%*/
+    padding: 5px 12px; /*le damos un relleno de 5px arriba y abajo, 12px a izquierda y derecha*/
+    transition: .3s ease all; /*una transicion de .3s con una funcion ease all*/
+    border-radius: 5px; /*que tenga un borde de 5px redondeado*/ 
+}
+
+/**/ /**/ /**/
