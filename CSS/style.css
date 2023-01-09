@@ -119,3 +119,8 @@ body { /*cambiamos el color de la pagina*/
 .trasera .datos p {
     margin-bottom: 5px; /*esto hara que se separe por 5px la etiqueta "p" de FIRMA Y CCV del contenedor de abajo con el lorem*/
 }
+
+.trasera .datos #firma {
+    width: 70%; /*esto nos dara un ancho del 70% del contenedor donde va la firma*/
+}
+
