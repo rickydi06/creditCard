@@ -124,3 +124,8 @@ body { /*cambiamos el color de la pagina*/
     width: 70%; /*esto nos dara un ancho del 70% del contenedor donde va la firma*/
 }
 
+.trasera .datos #firma .firma{ /*aunque es confuso, se esta accediendo a la parte TRASERA,, al contenedor DATOS, mismo que contiene al contenedor de id=FIRMA, que contiene las etiquetas "p" y el contenedor de clase FIRMA*/    
+    height: 40px; /*le damos una altura de 40px*/
+    background: repeating-linear-gradient(skyblue 0, skyblue 5px, orange 5px, orange 10px); /*le damos un fondo de gradiente*/
+}
+
