@@ -85,3 +85,9 @@ body { /*cambiamos el color de la pagina*/
     font-size: 22px; /*le damos un tamaño de fuente de 22px*/
     text-transform: uppercase; /*le damos un text-transform con propiedad uppercase, para asegurarse que ya sea que se escriba en mayusculas o minusculas, lo transforme a mayuscula*/
 }
+
+.delantera .flexbox { /*debido a que ingresamos los datos en un div, le damos la propiedad flex para modificarlo*/
+    display: flex; /*esto hara flexible este contenedor y de momento movera un div a lado del otro hasta que se modifique en la siguiente linea*/
+    justify-content: space-between; /*para separar los div de nombre y expiracion*/
+    margin-top: 20px; /*le damos un margen de 20px*/
+}
