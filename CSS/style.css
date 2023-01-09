@@ -182,3 +182,7 @@ body { /*cambiamos el color de la pagina*/
 .contenedor-btn .btn-abrir-formulario:hover {
     background: #1850b1; /*al pasar con el puntero sobre el boton, el color de fondo va a cambiar a un tono mas oscuro*/
 }
+
+.contenedor-btn .btn-abrir-formulario.active { /*aqui sera cuando tenga la clase active,, quiero que tenga los siguientes estilos*/
+    transform: rotate(45deg); /*el transform va a hacer que rote 45°*/
+}
