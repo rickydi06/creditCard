@@ -186,3 +186,17 @@ body { /*cambiamos el color de la pagina*/
 .contenedor-btn .btn-abrir-formulario.active { /*aqui sera cuando tenga la clase active,, quiero que tenga los siguientes estilos*/
     transform: rotate(45deg); /*el transform va a hacer que rote 45°*/
 }
+
+/*EMPIEZA FORMULARIO TARJETA*/  
+.formulario-tarjeta {
+    background: #fff; /*le damos un fondo blanco*/
+    width: 100%; /*le damos un ancho de 100%*/
+    max-width: 700px; /*le damos un maximo de ancho de 700px*/
+    padding: 150px 30px 30px 30px; /*le damos un relleno de 150px arriba, 30px derecha, 30px abajo y 30px izquierda*/
+    border-radius: 10px; /*redondeamos las esquinas 10px*/
+    position: relative; /*esto es importante para desplazarnos nuestro menu*/
+    top: -150px; /*le decimos que suba el formulario con ayuda del signo -, unos 150px que es la misma cantidad que se le dio de padding*/
+    z-index: 1; /*le decimos que el indice de este elemento sera el #1, ya que el #2, es la tarjeta y el #3 es el boton*/
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /*con el estilo "clip-path" se puede hacer la animacion de que al dar clic en el boton, aparece y desaparece el formulario, ahora la propiedad de "polygon", con las coordenadas (0 0, ), el primer 0 es de izquierda a derecha y el segundo 0 es de arriba a abajo, luego le digo, que el poligono vaya hacia la coordenada (100% 0) derecha y arriba a abajo*/
+    /* transition: clip-path .3s ease-out; que tenga una transicion con la popiedad "clip-path", de .3segundos con una funcion de tiempo ease-out (efecto de termino lento) */
+}
