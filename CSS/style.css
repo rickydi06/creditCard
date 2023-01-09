@@ -77,3 +77,11 @@ body { /*cambiamos el color de la pagina*/
     color: #7d8994; /*le damos un color de fuente*/
     margin-bottom: 5px; /*le damos un margen inferior de 5px*/
 }
+
+.delantera .grupo .numero,  
+.delantera .grupo .nombre,
+.delantera .grupo .expiracion { /*de esta forma podemos darle formato a cada uno de los grupos, separando por una coma*/ 
+    color: #fff; /*le damos un color blanco*/
+    font-size: 22px; /*le damos un tamaño de fuente de 22px*/
+    text-transform: uppercase; /*le damos un text-transform con propiedad uppercase, para asegurarse que ya sea que se escriba en mayusculas o minusculas, lo transforme a mayuscula*/
+}
