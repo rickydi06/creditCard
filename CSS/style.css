@@ -129,3 +129,12 @@ body { /*cambiamos el color de la pagina*/
     background: repeating-linear-gradient(skyblue 0, skyblue 5px, orange 5px, orange 10px); /*le damos un fondo de gradiente*/
 }
 
+.trasera .datos #firma .firma p {
+    line-height: 40px; /*esto crea una linea de altura del mismo tamaño que se hizo en el estilo anterior de arribe*/
+    font-family: 'Liu Jian Mao Cao', cursive; /*ocupamos la fuente que nombramos en el html, y en caso de no encontrarla que la haga cursiva*/
+    color: #000; /*color de texto negro*/
+    font-size: 30px; /*un tamaño de fuente de 30px*/
+    padding: 0 10px; /*le estamos poniendo un RELLENO ARRIBA Y ABAJO de 0px y en la IZQUIERDA y DERECHA de 10px*/
+    text-transform: capitalize; /*esto hace que todas las palabras que escribamos aparezcan con la primer letra mayuscula y las demas minusculas en cada palabra*/
+}
+
