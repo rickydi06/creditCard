@@ -155,3 +155,7 @@ body { /*cambiamos el color de la pagina*/
     line-height: 24px; /*una altura de linea de 24px*/
 }
 
+.trasera .link-banco {
+    font-size: 14px; /*al igual que la leyenda, le damos un tamaño de letra de 14px*/
+    color: #fff; /*y un color de letra color blanco*/
+}
