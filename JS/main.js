@@ -3,7 +3,8 @@ const tarjeta = document.querySelector('#tarjeta'), //agregamos una constante de
     formulario = document.querySelector('#formulario-tarjeta'), //quitamos el ";" que habiamos puesto en la línea anterior por una ",", y agregamos otra variable (formulario)
     numeroTarjeta = document.querySelector('#tarjeta .numero'), //quitamos el ";" que habiamos puesto en la linea anterior por una ",", y agregamos otra variable (numeroTarjeta)
     nombreTarjeta = document.querySelector('#tarjeta .nombre'), //quitamos el ";" que habiamos puesto en la linea anterior por una ",", y agregamos otra variable (nombreTarjeta)
-    logoMarca = document.querySelector('#logo-marca'); //quitamos el ";" que habiamos puesto en la linea anterior por una ",", y agregamos otra variable (logoMarca) que ocuparemos para para parte del numero de tarjeta que se relacionara con el logotipo a mostrar
+    logoMarca = document.querySelector('#logo-marca'), //quitamos el ";" que habiamos puesto en la linea anterior por una ",", y agregamos otra variable (logoMarca) que ocuparemos para para parte del numero de tarjeta que se relacionara con el logotipo a mostrar
+    firma = document.querySelector('#tarjeta .firma p'); //quitamos el ";" que habiamos puesto en la linea anterior por una ",", y agregamos otra variable (firma) que ocuparemos para para parte de la firma que esta en la parte trasera de la tarjeta y la esta ocasion como la parte de la firma se encuentra dentro de una etiqueta "p" (parrafo), agregamos esta tambien al "querySelector('#tarjeta .firma p')"
 
 //Con este pedazo de codigo nosotros giramos la tarjeta
 const mostrarFrente = () => { //creamos una variable constante "mostrarFrente" que sera igual a una funcion de tipo flecha
@@ -38,7 +39,7 @@ for(let i = yearActual; i <= yearActual + 8; i++ ){ //creamos un ciclo for
     opcion.innerText = i; //le decimos que opcion.innerText sea igual a 'i', el innerText es para trabajar dentro de la etiqueta "opcion", que se encuentra dentro del "Select", es decir con los meses
     formulario.selectYear.appendChild(opcion); //luego mediante la variable que creamos en la linea 3, accedemos al 'id' que creamos en la parte del Select, y el 'appendChild', nos va a permitir poner dentro del Select nuestra 'opcion'
 }
-//INPUT numero de tarjeta
+//INPUT NUMERO DE TARJETA
 formulario.inputNumero.addEventListener('keyup', (e) => { //accedemos al formulario y luego al inputNumero, le agregamos un addEventListener y lo que hara este event, es detectar cuando el usuario presiones alguna tecla pero en este caso lo hacemos con 'keyup' y con esto, el usuario presiona la tecla y al soltarla o levantar el dedo se va ejecutar el este evento y lo que quiero hacer es pasarle una funcion como segundo parametro que es la que se va a ejecutar
     let valorInput = e.target.value; //creamos una variable let "valorInput" que guardara el valor de "e" de la linea anterior, es decir, estamos accediendo al valor del input, mediante el evento "E", mediante el elemento que recibio el evento ".target", mediante el valor ".value",basicamente estamos guardando el valor del input
  
@@ -70,7 +71,21 @@ formulario.inputNumero.addEventListener('keyup', (e) => { //accedemos al formula
 
     mostrarFrente(); //ahora si tenemos el reverso de la tarjeta y comenzamos a escribir, lo que hara la tarjeta es inmediatamente girar la tarjeta para visualizar lo que estamos escribiendo
 
-
-
 });
+
+//INPUT NOMBRE DE TITULAR
+formulario.inputNombre.addEventListener('keyup', (e) => { //accedemos al formulario y luego al inputNombre, le agregamos un addEventListener y lo que hara este event, es detectar cuando el usuario presiones alguna tecla pero en este caso lo hacemos con 'keyup' y con esto, el usuario presiona la tecla y al soltarla o levantar el dedo se va ejecutar el este evento y lo que quiero hacer es pasarle una funcion como segundo parametro que es la que se va a ejecutar
+    let valorInput = e.target.value; //creamos una variable let "valorInput" que guardara el valor de "e" de la linea anterior, es decir, estamos accediendo al valor del input, mediante el evento "E", mediante el elemento que recibio el evento ".target", mediante el valor ".value",basicamente estamos guardando el valor del input
+    
+    formulario.inputNombre.value = valorInput.replace(/([0-9])/g, ''); //accedemos al formulario, luego al inputNombre, que va a tener un valor y que sera igual a valorInput, y esto es porque es basicamente el mismo valor, a lo que agregamos un metodo "replace" al metodo "replace", le puedo pasar una expresion regular, es decir, un pequeño fragmento de codigo; esto hace que reemplace numeros, espacios o letras, la expresion [0-9], dice que queremos que encuentre del 0 al 9, ahora queremos que lo sustituya por nada
+    nombreTarjeta.textContent = valorInput;
+    firma.textContent = valorInput;
+   
+    if(valorInput == ''){ //la sentencia dice que si la variable "valorInput" es igual a algo vacio o no se escribe en el input...
+        nombreTarjeta.textContent = 'Ricardo Díaz G.'; //esto hara que se escriba en el input "Ricardo Díaz G."
+    }
+
+//   mostrarFrente(); //ahora si tenemos el reverso de la tarjeta y comenzamos a escribir, lo que hara la tarjeta es inmediatamente girar la tarjeta para visualizar lo que estamos escribiendo
+})
+
 
