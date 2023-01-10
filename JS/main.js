@@ -1,7 +1,16 @@
 const tarjeta = document.querySelector('#tarjeta'), //agregamos una constante de nombre tarjeta (nada tiene que ver con el html) y accedemos al id="tarjeta" del HTML
     btnAbrirFormulario = document.querySelector('#btn-abrir-formulario'), //quitamos el ";" que habiamos puesto por una ",", y agregamos otra variable (btnAbrirFormulario) en la siguiente linea
-    formulario = document.querySelector('#formulario-tarjeta'); //quitamos el ";" que habiamos puesto en la línea anterior por una ",", y agregamos otra variable (formulario)
+    formulario = document.querySelector('#formulario-tarjeta'), //quitamos el ";" que habiamos puesto en la línea anterior por una ",", y agregamos otra variable (formulario)
+    numeroTarjeta = document.querySelector('#tarjeta .numero'), //quitamos el ";" que habiamos puesto en la linea anterior por una ",", y agregamos otra variable (numeroTarjeta)
+    nombreTarjeta = document.querySelector('#tarjeta .nombre'), //quitamos el ";" que habiamos puesto en la linea anterior por una ",", y agregamos otra variable (nombreTarjeta)
+    logoMarca = document.querySelector('#logo-marca'); //quitamos el ";" que habiamos puesto en la linea anterior por una ",", y agregamos otra variable (logoMarca) que ocuparemos para para parte del numero de tarjeta que se relacionara con el logotipo a mostrar
 
+//Con este pedazo de codigo nosotros giramos la tarjeta
+const mostrarFrente = () => { //creamos una variable constante "mostrarFrente" que sera igual a una funcion de tipo flecha
+    if(tarjeta.classList.contains('active')){ //decimos si "if" tarjeta al acceder a "classList", al acceder a contains, tiene la clase "active" entonces
+      tarjeta.classList.remove('active'); //accedemos a tarjeta, accedemos a "classList", y agregamos un "remove" para que elimine la clase "active"
+    }
+}
 
 // esta parte hace la funcion de darle un giro a la tarjeta al hacer clic sobre ella
 tarjeta.addEventListener('click', () => { /*queremos acceder a tarjeta con el evento listener y queremos que cuando se de un clic, me ejecute la siguiente funcione "() =>"*/ 
@@ -38,4 +47,30 @@ formulario.inputNumero.addEventListener('keyup', (e) => { //accedemos al formula
     .replace(/\D/g, '') //la expresion "\D" lo que hara es buscar todas las letras
     .replace(/([0-9]{4})/g, '$1 ') //la expresion [0-9], dice que queremos que vaya del 0 al 9, agregamos {4}, que haga grupos de 4 caracteres, ahora queremos que agregue un espacio cada 4 caracteres, y lo hacemos con '$1 ', signo de pesos, un 1, y un espacio entre comillas simple
     .trim(); //lo que hace este metodo "trim" es quitar el ultimo espacio de una cadena de texto lo quita 
+
+    numeroTarjeta.textContent = valorInput; //a la variable creada, le decimos que contenga el contenido que va a estar dentro de (Numero Tarjeta #### #### #### ####), accedemos a el y sea igual al valor del input (valorInput)
+
+    if(valorInput == ''){ //la sentencia dice que si la variable "valorInput" es igual a algo vacio o no se escribe en el input...
+        numeroTarjeta.textContent = '#### #### #### ####'; //esto hara que si no se ha escrito algo en el input se coloque en el espacio #### #### #### ####
+
+        logoMarca.innerHTML = ''; //esta parte se agrega para que en caso de que el input este vacio, se quite el logotipo
+    }
+
+    if(valorInput[0] == 4){ //este if servira para validar que si el numero de tarjeta empieza con un numero 4, el logotipo que aparecera sera el de VISA
+        logoMarca.innerHTML = ''; // al usar este codigo, sucedera que se eliminara el logotipo que tengamos dentro y luego agregara la imagen
+        const imagen = document.createElement('img'); //creamos una variable constante (imagen), que va a ser igual a "document.createElement('img')", porque queremos crear una imagen y agregamos una etiqueta de tipo "img"
+        imagen.src = 'Image/logos/visa.png'; //queremos que la "imagen" tenga un atributo de tipo "src" y sera igual a la ruta de la imagen de VISA
+        logoMarca.appendChild(imagen); //entonces una vez creada la variable al inicio, la usamos y con el (appendChild), agregamos un elemento hijo de la imagen
+    }else if(valorInput[0] == 5){ //este if servira para validar que si el numero de tarjeta empieza con un numero 5, el logotipo que aparecera sera el de MASTER CARD
+        logoMarca.innerHTML = ''; // al usar este codigo, sucedera que se eliminara el logotipo que tengamos dentro y luego agregara la imagen
+        const imagen = document.createElement('img'); //creamos una variable constante (imagen), que va a ser igual a "document.createElement('img')", porque queremos crear una imagen y agregamos una etiqueta de tipo "img"
+        imagen.src = 'Image/logos/mastercard.png'; //queremos que la "imagen" tenga un atributo de tipo "src" y sera igual a la ruta de la imagen de MASTER CARD
+        logoMarca.appendChild(imagen); //entonces una vez creada la variable al inicio, la usamos y con el (appendChild), agregamos un elemento hijo de la imagen
+    }
+
+    mostrarFrente(); //ahora si tenemos el reverso de la tarjeta y comenzamos a escribir, lo que hara la tarjeta es inmediatamente girar la tarjeta para visualizar lo que estamos escribiendo
+
+
+
 });
+
