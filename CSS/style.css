@@ -234,4 +234,9 @@ body { /*cambiamos el color de la pagina*/
     outline: rgb(4, 4, 4); /*hacemos un contorno (outline) que se dibuja fuera del borde para que el elemento destaque, con un color de 4, 4, 4)*/
     box-shadow: 1px 7px 10px -5px rgba(90, 16, 118, 0.3); /*una sombra de 1px derecha, 7px abajo, 10px de difuminado y -5px de dispersion con un color rgba*/
 }
+
+.formulario-tarjeta input {
+    margin-bottom: 20px; /*le damos un margen inferior de 20px*/
+    text-transform: uppercase; /*que cuando escriba, todo aparezca en mayuscula*/
+}
  /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**//**/ /**/ /**//**/ /**/ /**/
