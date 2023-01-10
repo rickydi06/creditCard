@@ -244,4 +244,13 @@ body { /*cambiamos el color de la pagina*/
     display: flex; /*le damos un display de tipo flex*/
     justify-content: space-between; /*hacemos que  los elementos tengan el mismo espacio entre ellos*/
 }
+
+.formulario-tarjeta .expira {
+    width: 100%; /*le damos un ancho del 100%*/
+}
+
+.formulario-tarjeta .cvv {
+    min-width: 100px; /*le damos un ancho del 100%*/
+}
+
  /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**//**/ /**/ /**//**/ /**/ /**/
