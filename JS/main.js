@@ -29,3 +29,13 @@ for(let i = yearActual; i <= yearActual + 8; i++ ){ //creamos un ciclo for
     opcion.innerText = i; //le decimos que opcion.innerText sea igual a 'i', el innerText es para trabajar dentro de la etiqueta "opcion", que se encuentra dentro del "Select", es decir con los meses
     formulario.selectYear.appendChild(opcion); //luego mediante la variable que creamos en la linea 3, accedemos al 'id' que creamos en la parte del Select, y el 'appendChild', nos va a permitir poner dentro del Select nuestra 'opcion'
 }
+//INPUT numero de tarjeta
+formulario.inputNumero.addEventListener('keyup', (e) => { //accedemos al formulario y luego al inputNumero, le agregamos un addEventListener y lo que hara este event, es detectar cuando el usuario presiones alguna tecla pero en este caso lo hacemos con 'keyup' y con esto, el usuario presiona la tecla y al soltarla o levantar el dedo se va ejecutar el este evento y lo que quiero hacer es pasarle una funcion como segundo parametro que es la que se va a ejecutar
+    let valorInput = e.target.value; //creamos una variable let "valorInput" que guardara el valor de "e" de la linea anterior, es decir, estamos accediendo al valor del input, mediante el evento "E", mediante el elemento que recibio el evento ".target", mediante el valor ".value",basicamente estamos guardando el valor del input
+ 
+    formulario.inputNumero.value = valorInput //accedemos al formulario, luego al inputNumero, que va a tener un valor y que sera igual a valorInput, y esto es porque es basicamente el mismo valor, a lo que agregamos un metodo "replace" al metodo "replace", le puedo pasar una expresion regular, es decir, un pequeño fragmento de codigo; esto hace que reemplace numeros, espacios o letras
+    .replace(/\s/g, '') //se separa el replace para ver mejor su funcion, se ocupa el (\s) para el espacio en blanco y asi eliminarlos, y lo que se pone en comillas es lo que deseamos que aparezzca en su lugar y quitamos el punto y coma para agregar mas validaciones con replace
+    .replace(/\D/g, '') //la expresion "\D" lo que hara es buscar todas las letras
+    .replace(/([0-9]{4})/g, '$1 ') //la expresion [0-9], dice que queremos que vaya del 0 al 9, agregamos {4}, que haga grupos de 4 caracteres, ahora queremos que agregue un espacio cada 4 caracteres, y lo hacemos con '$1 ', signo de pesos, un 1, y un espacio entre comillas simple
+    .trim(); //lo que hace este metodo "trim" es quitar el ultimo espacio de una cadena de texto lo quita 
+});
