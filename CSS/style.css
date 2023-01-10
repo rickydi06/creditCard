@@ -229,3 +229,9 @@ body { /*cambiamos el color de la pagina*/
     border: 2px solid #93bded; /*que tenga un borde de 2px, solido y un color*/
 }
 
+.formulario-tarjeta input:focus,
+.formulario-tarjeta select:focus { /*decimos que los inputs como los selects en su estado focus tengan lo siguiente*/
+    outline: rgb(4, 4, 4); /*hacemos un contorno (outline) que se dibuja fuera del borde para que el elemento destaque, con un color de 4, 4, 4)*/
+    box-shadow: 1px 7px 10px -5px rgba(90, 16, 118, 0.3); /*una sombra de 1px derecha, 7px abajo, 10px de difuminado y -5px de dispersion con un color rgba*/
+}
+ /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**//**/ /**/ /**//**/ /**/ /**/
