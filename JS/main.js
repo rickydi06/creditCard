@@ -21,4 +21,11 @@ for(let i = 1; i <= 12; i++ ){ //creamos un ciclo for
     opcion.innerText = i; //le decimos que opcion.innerText sea igual a 'i', el innerText es para trabajar dentro de la etiqueta "opcion", que se encuentra dentro del "Select", es decir con los meses
     formulario.selectMes.appendChild(opcion); //luego mediante la variable que creamos en la linea 3, accedemos al 'id' que creamos en la parte del Select, y el 'appendChild', nos va a permitir poner dentro del Select nuestra 'opcion'
 }
-
+//SELECT del AÑO generado dinamicamente
+const yearActual = new Date().getFullYear(); //creamos una variable para el año, llamada "yearActual", que sera igual con la fecha del sistema de la computadora y para eso nos ayudamos con el metodo ".getFullYear" 
+for(let i = yearActual; i <= yearActual + 8; i++ ){ //creamos un ciclo for
+    let opcion = document.createElement('option'); //decimos que en cada ejecucion se cree una variable llamada opcion, y document.createElement(''), va a crear una especie de etiqueta llamada "option", QUE SON LAS QUE VAN DENTRO DEL SELECT
+    opcion.value = i; //le decimos que queremos accedera a la nueva variable "opcion", y le digo que el valor sea igual a la variable 'i', por lo tanto el codigo se va a ejecutar 12 veces
+    opcion.innerText = i; //le decimos que opcion.innerText sea igual a 'i', el innerText es para trabajar dentro de la etiqueta "opcion", que se encuentra dentro del "Select", es decir con los meses
+    formulario.selectYear.appendChild(opcion); //luego mediante la variable que creamos en la linea 3, accedemos al 'id' que creamos en la parte del Select, y el 'appendChild', nos va a permitir poner dentro del Select nuestra 'opcion'
+}
