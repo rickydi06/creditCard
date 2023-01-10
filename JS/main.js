@@ -4,9 +4,12 @@ const tarjeta = document.querySelector('#tarjeta'), //agregamos una constante de
     numeroTarjeta = document.querySelector('#tarjeta .numero'), //quitamos el ";" que habiamos puesto en la linea anterior por una ",", y agregamos otra variable (numeroTarjeta)
     nombreTarjeta = document.querySelector('#tarjeta .nombre'), //quitamos el ";" que habiamos puesto en la linea anterior por una ",", y agregamos otra variable (nombreTarjeta)
     logoMarca = document.querySelector('#logo-marca'), //quitamos el ";" que habiamos puesto en la linea anterior por una ",", y agregamos otra variable (logoMarca) que ocuparemos para para parte del numero de tarjeta que se relacionara con el logotipo a mostrar
-    firma = document.querySelector('#tarjeta .firma p'); //quitamos el ";" que habiamos puesto en la linea anterior por una ",", y agregamos otra variable (firma) que ocuparemos para para parte de la firma que esta en la parte trasera de la tarjeta y la esta ocasion como la parte de la firma se encuentra dentro de una etiqueta "p" (parrafo), agregamos esta tambien al "querySelector('#tarjeta .firma p')"
+    firma = document.querySelector('#tarjeta .firma p'), //quitamos el ";" que habiamos puesto en la linea anterior por una ",", y agregamos otra variable (firma) que ocuparemos para para parte de la firma que esta en la parte trasera de la tarjeta y la esta ocasion como la parte de la firma se encuentra dentro de una etiqueta "p" (parrafo), agregamos esta tambien al "querySelector('#tarjeta .firma p')"
+    mesExpiracion = document.querySelector('#tarjeta #expiracion .mes'), //quitamos el ";" que habiamos puesto en la linea anterior por una ",", y agregamos otra variable (mesExpiracion) que ocuparemos para la parte del mes que esta en la parte de expiracion y lo hacemos accediendo al id tarjeta, al id expiracion y a la clase mes "querySelector('#tarjeta #expiracion .mes')"
+    yearExpiracion = document.querySelector('#tarjeta #expiracion .year'); //quitamos el ";" que habiamos puesto en la linea anterior por una ",", y agregamos otra variable (mesExpiracion) que ocuparemos para la parte del año que esta en la parte de expiracion y lo hacemos accediendo al id tarjeta, al id expiracion y a la clase año "querySelector('#tarjeta #expiracion .year')"
+    cvv = document.querySelector('#tarjeta #trasera #cvv'); //quitamos el ";" que habiamos puesto en la linea anterior por una ",", y agregamos otra variable (mesExpiracion) que ocuparemos para la parte del mes que esta en la parte de expiracion y lo hacemos accediendo al id tarjeta, al id expiracion y al id cvv "querySelector('#tarjeta #trasera #cvv')"
 
-//Con este pedazo de codigo nosotros giramos la tarjeta
+    //Con este pedazo de codigo nosotros giramos la tarjeta
 const mostrarFrente = () => { //creamos una variable constante "mostrarFrente" que sera igual a una funcion de tipo flecha
     if(tarjeta.classList.contains('active')){ //decimos si "if" tarjeta al acceder a "classList", al acceder a contains, tiene la clase "active" entonces
       tarjeta.classList.remove('active'); //accedemos a tarjeta, accedemos a "classList", y agregamos un "remove" para que elimine la clase "active"
@@ -86,6 +89,12 @@ formulario.inputNombre.addEventListener('keyup', (e) => { //accedemos al formula
     }
 
 //   mostrarFrente(); //ahora si tenemos el reverso de la tarjeta y comenzamos a escribir, lo que hara la tarjeta es inmediatamente girar la tarjeta para visualizar lo que estamos escribiendo
-})
+});
 
+//SELECT MES
+formulario.selectMes.addEventListener('change', (e) => {
+    mesExpiracion.textContent = e.target.value;
+    
+    mostrarFrente(); //ahora si tenemos el reverso de la tarjeta y comenzamos a escribir, lo que hara la tarjeta es inmediatamente girar la tarjeta para visualizar lo que estamos escribiendo
+});
 
