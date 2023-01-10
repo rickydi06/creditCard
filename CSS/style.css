@@ -256,6 +256,14 @@ body { /*cambiamos el color de la pagina*/
 .formulario-tarjeta .grupo-select {
     width: 100%; /*le damos un ancho del 100%*/
     margin-right: 15px; /*que entre los elementos del grupo haya un margin dercho de 15px*/
+    position: relative; /*le damos un posicionamiento relativo para que cuando pongamos el icono fontawesome, podamos darle un posicionamiento mediante corrdenadas*/
 }
+
+.formulario-tarjeta select{
+    -webkit-appearance: none; /*con esto le quito la apariencia del icono que trae por defecto con el navegador el select*/
+}
+
+
+
 
  /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**//**/ /**/ /**//**/ /**/ /**/
