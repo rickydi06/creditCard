@@ -250,7 +250,12 @@ body { /*cambiamos el color de la pagina*/
 }
 
 .formulario-tarjeta .cvv {
-    min-width: 100px; /*le damos un ancho del 100%*/
+    min-width: 100px; /*le damos un ancho minimo de 100px*/
+}
+
+.formulario-tarjeta .grupo-select {
+    width: 100%; /*le damos un ancho del 100%*/
+    margin-right: 15px; /*que entre los elementos del grupo haya un margin dercho de 15px*/
 }
 
  /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**//**/ /**/ /**//**/ /**/ /**/
