@@ -98,3 +98,22 @@ formulario.selectMes.addEventListener('change', (e) => {
     mostrarFrente(); //ahora si tenemos el reverso de la tarjeta y comenzamos a escribir, lo que hara la tarjeta es inmediatamente girar la tarjeta para visualizar lo que estamos escribiendo
 });
 
+//SELECT AÑO
+formulario.selectYear.addEventListener('change', (e) => {
+    yearExpiracion.textContent = e.target.value.slice(2); //agregamos el metodo slice para que al mostrar el año aue elegimos solo nos muestre 2 digitos y no cuatro
+    
+    mostrarFrente(); //ahora si tenemos el reverso de la tarjeta y comenzamos a escribir, lo que hara la tarjeta es inmediatamente girar la tarjeta para visualizar lo que estamos escribiendo
+});
+
+//CVV
+formulario.inputCVV.addEventListener('keyup', () => {
+    if(!tarjeta.classList.contains('active')){
+        tarjeta.classList.toggle('active');
+    }
+
+    formulario.inputCVV.value = formulario.inputCVV.value
+    .replace(/\s/g, '') //se separa el replace para ver mejor su funcion, se ocupa el (\s) para el espacio en blanco y asi eliminarlos, y lo que se pone en comillas es lo que deseamos que aparezzca en su lugar y quitamos el punto y coma para agregar mas validaciones con replace
+    .replace(/\D/g, '') //la expresion "\D" lo que hara es buscar todas las letras
+
+    cvv.textContent = formulario.inputCVV.value;
+}) 
