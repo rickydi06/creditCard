@@ -263,7 +263,12 @@ body { /*cambiamos el color de la pagina*/
     -webkit-appearance: none; /*con esto le quito la apariencia del icono que trae por defecto con el navegador el select*/
 }
 
-
-
+.formulario-tarjeta .grupo-select i {
+    position: absolute; /*esto hara que los iconos fontawesome se coloquen de forma absoluta en las coordenadas que queremos*/
+    color: #ced6e0; /*le damos un color*/
+    top: 18px; /*le deecimos que suba 18px*/
+    right: 15px; /*que se mueva 15px a la derecha*/
+    transition: .3s ease all; /*con una funcion de anumacion de .3s con una propiedad ease all*/
+}
 
  /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**//**/ /**/ /**//**/ /**/ /**/
