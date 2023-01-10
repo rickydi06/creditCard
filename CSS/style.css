@@ -239,4 +239,9 @@ body { /*cambiamos el color de la pagina*/
     margin-bottom: 20px; /*le damos un margen inferior de 20px*/
     text-transform: uppercase; /*que cuando escriba, todo aparezca en mayuscula*/
 }
+
+.formulario-tarjeta .flexbox {
+    display: flex; /*le damos un display de tipo flex*/
+    justify-content: space-between; /*hacemos que  los elementos tengan el mismo espacio entre ellos*/
+}
  /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**//**/ /**/ /**//**/ /**/ /**/
