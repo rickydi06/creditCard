@@ -271,4 +271,7 @@ body { /*cambiamos el color de la pagina*/
     transition: .3s ease all; /*con una funcion de anumacion de .3s con una propiedad ease all*/
 }
 
+.formulario-tarjeta .grupo-select:hover i {
+    color: #93bfed; /*le damos un color distinto para cuando pasemos con el raton sobre el area*/
+}
  /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**//**/ /**/ /**//**/ /**/ /**/
